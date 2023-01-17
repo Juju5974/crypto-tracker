@@ -1,0 +1,229 @@
+@font-face {
+	font-family: 'Akzidenz';
+	src: url(akzidenz-grotesk-bq-condensed.otf) format(‘otf’)
+}
+@font-face {
+	font-family: 'Roboto-bold';
+	src: url(roboto-bold.ttf) format(‘ttf’)
+}
+@font-face {
+	font-family: 'Roboto-regular';
+	src: url(roboto-regular.ttf) format(‘ttf’)
+}
+
+/* basic reset */
+* {
+    font-family: 'Roboto-regular';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* generality */
+body {
+    font-size: 2vw;
+    width: 100vw;
+    min-width: 300px;
+    max-width: 700px;
+    height: 100vh;
+    min-height:600px;
+    max-height: 900px;
+}
+
+/* index */
+.logo {
+    font-family: 'Akzidenz', sans-serif;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+.menu svg {
+    fill:#efefef;
+    height: 18px;
+}
+.total {
+background-image: url("../images/background1.png");
+background-size: auto;
+}
+.total * {
+    font-weight: bold;
+    font-size: 2rem;
+}
+.total a {
+    text-decoration: none;
+}
+.total a:hover, a:focus {
+    text-shadow: 0px 0px 15px #1fc36c, 0px 0px 15px #1fc36c;
+}
+.list, .header-add-remove {
+    border-bottom: 1px solid #303030;
+}
+.list {
+    width: 80%;
+}
+.actif {
+    display: flex;
+    align-items: center;
+}
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: end;   
+}
+.crypto-acronym {
+    font-weight: bold;
+    font-size: 1rem;
+}
+.crypto-logo {
+    height: 22px;
+    object-fit: contain;
+}
+.crypto-arrow {
+    height: 20px;
+    max-width:64px;
+    object-fit: contain;
+}
+.crypto-name {
+    font-size: 0.65rem;
+    font-weight:50;
+}
+
+/* add / remove */
+.title {
+    font-family: 'Roboto-bold';
+    font-weight: bold;
+    font-size: 1rem;
+}
+.header-add-remove {
+    position: relative;
+}
+.cross-back svg {
+    padding-left: 20px;
+    fill:#efefef;
+    position:absolute;
+    height: 18px;
+    left:0;
+}
+.article-add-remove {
+    height: 80%
+}
+form {
+    font-size: 0.75rem;
+    width: 70%;
+    height: 100%;
+    max-height: 800px;
+    position: relative;
+}
+select {
+    appearance: none;
+    background-color: #100f0f
+}
+option:focus {
+    background-color: #1fc36c;
+}
+select {
+    overflow-y: scroll;
+    scrollbar-width: thin;
+}
+select::-webkit-scrollbar {
+    width: 10px; /* width of the entire scrollbar */
+}  
+select::-webkit-scrollbar-track {
+    background: #100f0f; /* color of the tracking area */
+}  
+select::-webkit-scrollbar-thumb {
+    background-color: dimgray; /* color of the scroll thumb */
+    border-radius: 20px; /* roundness of the scroll thumb */
+    border: 3px solid #100f0f; /* creates padding around scroll thumb */
+}
+input, select {
+    border: 1px solid dimgray;
+    border-radius: 3px;
+    width: 100%;
+    padding-left: 40px;
+}
+input:focus, select:focus, input:hover, select:hover {
+    border: 1px solid #1fc36c;
+    box-shadow: 0px 0px 3px #efefef, 0px 0px 5px #1fc36c, 0px 0px 15px #1fc36c;
+    outline: none;
+}
+input::placeholder {
+    color: #efefef;
+}
+.input-icone, .select-icone {
+    position:relative; 
+}
+.input-icone svg, .select-icone svg { 
+    padding-left:14px;
+    fill:dimgray;
+    position:absolute;
+    left:0;
+    height: 14px;
+}
+.input-icone svg {
+    top:27px; 
+}
+.select-icone svg {
+    top:59px; 
+}
+button {
+    border: none;
+    border-radius: 5px;
+    width: 80%;
+    font-weight: bold;
+    font-size: 1.25rem;
+    padding: 3%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: dimgray;
+}
+button:hover {
+    background-color:#efefef;
+}
+li {
+    list-style-type: none;
+}
+ul {
+    margin: 0;
+}
+
+.chart {
+    width: 95%;
+    height: 60%;
+    margin : 15% auto 0 auto;
+}
+
+@media screen and (min-width: 600px) {   
+    body {
+        width: 100%;
+        height: 100vh;
+        margin: auto;
+        border: 1px solid #efefef;
+        box-shadow: 0px 0px 1px #efefef, 0px 0px 5px dimgray, 0px 0px 15px dimgray;
+        border-radius: 30px;
+    }
+    .article-list {
+        height: 65%;
+        overflow-y: scroll;
+        scrollbar-width: thin;
+    }
+    .article-list::-webkit-scrollbar {
+        width: 10px; /* width of the entire scrollbar */
+    }  
+    .article-list::-webkit-scrollbar-track {
+        background: #100f0f; /* color of the tracking area */
+    }  
+    .article-list::-webkit-scrollbar-thumb {
+        background-color: dimgray; /* color of the scroll thumb */
+        border-radius: 20px; /* roundness of the scroll thumb */
+        border: 3px solid #100f0f; /* creates padding around scroll thumb */
+    }
+}
+@media screen and (min-height: 900px) and (min-width: 600px) {
+    html {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+    }
+}
